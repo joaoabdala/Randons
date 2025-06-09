@@ -11,14 +11,19 @@ while resposta == "S":
 
     #Formulas
 
-    delta = b**2 -4*a*c
+    delta = b**2 - 4 * a * c
+    if delta < 0:
+        print('Delta negativo, equação não possui raízes reais.')
+        resposta = input('Deseja continuar realizando operações? ').upper()
+        continue
+
     raizdelta = math.sqrt(delta)
-    x1 = (-b + raizdelta)/2*a
-    x2 = (-b - raizdelta)/2*a
+    x1 = (-b + raizdelta) / (2 * a)
+    x2 = (-b - raizdelta) / (2 * a)
 
     print(f'O valor de x1 é igual a {x1} e o valor de x2 é igual a {x2}')
 
     resposta = input('Deseja continuar realizando operações? ').upper()
 
     if resposta != "S":
-        print("Até a proxima!")
+        print("Até a próxima!")
